@@ -13,36 +13,55 @@ This script helps in collecting subdomains for a given target by leveraging onli
 
 ## Usage
 
-1. Clone the repository:
+1. **Clone the repository:**
 
     ```bash
     git clone https://github.com/sanskaros/enumerator.git
     ```
 
-2. Navigate to the script directory:
+2. **Navigate to the script directory:**
 
     ```bash
     cd enumerator
     ```
 
-3. Run the script:
+3. **Run the script:**
 
     ```bash
-    python3 subdomain_enum.py
+    python3 enumerator.py
     ```
 
-4. Follow the on-screen instructions to provide the target URL.
+4. **Follow the on-screen instructions to provide the target URL.**
 
 ## Output
 
-- The script generates a file named `<target>_httpx_output.txt` containing the results.
+- The script generates a file named `<target>.txt` containing the results.
 
 ## Notes
+
+- Ensure you have the latest version of Go:
+  - Go to the official Go download page: [https://golang.org/dl/](https://golang.org/dl/)
+  - Download and extract the tarball using the commands:
+    ```bash
+    wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
+    ```
+  - Set environment variables:
+    ```bash
+    echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+    echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+  - Remove previous versions of Go.
 
 - Ensure you have the `httpx` toolkit installed. You can install it using:
 
     ```bash
     pip install httpx
+    ```
+    or
+    ```bash
+    git clone https://github.com/projectdiscovery/httpx.git
     ```
 
 ## Author
@@ -52,8 +71,10 @@ This script helps in collecting subdomains for a given target by leveraging onli
 ## Version
 
 - 0.0.1
-- 1.0.0
+- 1.0.0 latest
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+--- 
