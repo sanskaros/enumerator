@@ -9,6 +9,7 @@ This script helps in collecting subdomains for a given target by leveraging onli
 ## Prerequisites
 
 - Python 3.x
+- Go (latest version)
 - `httpx` toolkit
 
 ## Usage
@@ -39,19 +40,33 @@ This script helps in collecting subdomains for a given target by leveraging onli
 
 ## Notes
 
-- Ensure you have the latest version of Go:
+- Ensure you have the latest version of Go.
+  Here's how:
+
   - Go to the official Go download page: [https://golang.org/dl/](https://golang.org/dl/)
-  - Download and extract the tarball using the commands:
+  - Find the version you want to install, right-click on the "Download" link, and copy the link address.
+  - Download and extract it using these commands:
+
     ```bash
     wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
     ```
+
   - Set environment variables:
+
     ```bash
     echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
     echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+    ```
+
+    If on WSL, refresh your profile:
+
+    ```bash
     source ~/.bashrc
     ```
+
+    Or restart your Linux or Windows.
+
   - Remove previous versions of Go.
 
 - Ensure you have the `httpx` toolkit installed. You can install it using:
@@ -59,10 +74,14 @@ This script helps in collecting subdomains for a given target by leveraging onli
     ```bash
     pip install httpx
     ```
-    or
+
+    Or clone from this repository:
+
     ```bash
     git clone https://github.com/projectdiscovery/httpx.git
     ```
+
+    And make sure to do this in the `go/bin` folder.
 
 ## Author
 
@@ -71,10 +90,8 @@ This script helps in collecting subdomains for a given target by leveraging onli
 ## Version
 
 - 0.0.1
-- 1.0.0 latest
+- 1.0.0 (latest)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
---- 
